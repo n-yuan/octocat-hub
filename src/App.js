@@ -1,3 +1,5 @@
+//THIS IS VERSION V0.1
+
 import React, { Component, Fragment } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./component/layout/Navbar";
@@ -61,13 +63,13 @@ class App extends Component {
   };
 
   render() {
-    const { loading, users, user, repos } = this.state;
+    const { loading, users, user, repos, alert } = this.state;
     return (
       <Router>
         <div>
           <Navbar />
           <div className="container">
-            <Alert alert={this.state.alert} />
+            <Alert alert={alert} />
             <Switch>
               <Route
                 exact
